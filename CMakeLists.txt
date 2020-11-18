@@ -17,3 +17,5 @@ add_library(hexjson SHARED
         src/token_c.c
         src/sutils.cpp
         src/deserializer.cpp)
+
+add_subdirectory(test)
