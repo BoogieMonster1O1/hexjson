@@ -21,4 +21,30 @@ public:
     [[nodiscard]] int int_value() const {
         return (int) (this -> value);
     }
+
+    json_number operator+ (const json_number& other) const {
+        return json_number(this -> value + other.value);
+    }
+
+    json_number operator- (const json_number& other) const {
+        return json_number(this -> value - other.value);
+    }
+
+    json_number operator* (const json_number& other) const {
+        return json_number(this -> value * other.value);
+    }
+
+    json_number operator/ (const json_number& other) const {
+        return json_number(this -> value / other.value);
+    }
+
+    json_number operator++ () {
+        this -> value++;
+        return *this;
+    }
+
+    json_number operator-- () {
+        this -> value--;
+        return *this;
+    }
 };

@@ -6,7 +6,7 @@ using namespace std;
 
 class json_object : public json_element {
 private:
-    map<string, json_element*> map = ::map<string, json_element*>();
+    map<string, json_element *> map = ::map<string, json_element *>();
 
 public:
     json_object() = default;
@@ -19,7 +19,11 @@ public:
         return g_json_object;
     }
 
-    ::map<string, json_element*> kvmap() {
+    ::map<string, json_element *> kvmap() {
         return this -> map;
+    }
+
+    json_element * operator[] (const string& key) {
+        return kvmap()[key];
     }
 };

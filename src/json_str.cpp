@@ -20,4 +20,13 @@ public:
     string str_value() {
         return this -> value;
     }
+
+    json_str operator+ (json_str& other) {
+        string newStr = this -> str_value() + other.str_value();
+        return json_str(newStr);
+    }
+
+    char operator[] (int index) {
+        return this -> str_value()[index];
+    }
 };

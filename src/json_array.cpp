@@ -22,4 +22,8 @@ public:
     vector<json_element *> * vlist() {
         return &values;
     }
+
+    json_element * operator[] (const int index) {
+        return (*vlist())[index];
+    }
 };
