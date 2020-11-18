@@ -1,20 +1,20 @@
 #include "json_element.cpp"
 #include "types.c"
 
-class json_int : public json_element {
+class json_double : public json_element {
 private:
-    int value;
+    double value;
 
 public:
-    explicit json_int(int value) {
+    explicit json_double(double value) {
         this -> value = value;
     }
 
     int get_type() override {
-        return JSON_INT;
+        return g_json_double;
     }
 
-    [[nodiscard]] int get_value() const {
+    [[nodiscard]] double get_value() const {
         return this -> value;
     }
 };
