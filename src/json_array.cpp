@@ -1,10 +1,10 @@
 #include "json_element.cpp"
-#include "json_type.c"
+#include "types.c"
 #include <list>
 
 using namespace std;
 
-class json_array : json_element {
+class json_array : public json_element {
 private:
     list<json_element> values = list<json_element>();
 

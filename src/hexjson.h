@@ -8,35 +8,18 @@
 #include "json_object.cpp"
 #include <string>
 #include <iostream>
+#include "scopes.c"
+#include <list>
+
+using namespace std;
 
 class json_reader {
 private:
-    string value;
-    long index = 0;
-    char peeked = ' ';
-    json_object object = json_object();
-
-    void skip(long& i) {
-        i++;
-        while (value[i] != '\"') {
-            i++;
-        }
-    }
+    string input;
 
 public:
-    explicit json_reader(const string& value) {
-        this -> value = value;
-    }
-
-    json_object read() {
-        if (value[value.size()] != '}' || value[value.size()] != '{') {
-            cerr << "root tag must be a json object";
-            return json_object();
-        }
-        index++;
-        // clean up
-        this -> index = 0;
-        return json_object();
+    explicit json_reader(const string& value) { // NOLINT(cppcoreguidelines-pro-type-member-init)
+        this -> input = value;
     }
 };
 
@@ -57,7 +40,7 @@ json_null null() {
 }
 
 json_object read(const string& value) {
-    return json_reader(value).read();
+    return json_reader(value);
 }
 
 #endif

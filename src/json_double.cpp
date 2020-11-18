@@ -1,7 +1,7 @@
 #include "json_element.cpp"
-#include "json_type.c"
+#include "types.c"
 
-class json_double : json_element {
+class json_double : public json_element {
 private:
     double value;
 

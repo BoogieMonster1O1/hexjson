@@ -1,10 +1,10 @@
 #include "json_element.cpp"
-#include "json_type.c"
+#include "types.c"
 #include <map>
 
 using namespace std;
 
-class json_object : json_element {
+class json_object : public json_element {
 private:
     map<string, json_element> map = ::map<string, json_element>();
 
