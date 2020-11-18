@@ -1,20 +1,23 @@
 #include "json_element.cpp"
-#include "types.c"
+#include "flags.c"
+#include <string>
 
-class json_int : public json_element {
+using namespace std;
+
+class json_str : public json_element {
 private:
-    int value;
+    string value;
 
 public:
-    explicit json_int(int value) {
+    explicit json_str(string& value) {
         this -> value = value;
     }
 
     int get_type() override {
-        return g_json_int;
+        return g_json_str;
     }
 
-    [[nodiscard]] int get_value() const {
+    string str_value() {
         return this -> value;
     }
 };

@@ -1,11 +1,11 @@
 #include "json_element.cpp"
-#include "types.c"
+#include "flags.c"
 
 class json_null : public json_element {
 
 public:
     int get_type() override {
-        return JSON_NULL;
+        return g_json_null;
     }
 
     json_null() = default;

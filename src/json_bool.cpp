@@ -1,5 +1,5 @@
 #include "json_element.cpp"
-#include "types.c"
+#include "flags.c"
 
 class json_bool : public json_element {
 private:
@@ -11,7 +11,7 @@ public:
     }
 
     int get_type() override {
-        return JSON_BOOL;
+        return g_json_bool;
     }
 
     [[nodiscard]] bool get_value() const {

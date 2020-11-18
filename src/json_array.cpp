@@ -1,25 +1,25 @@
 #include "json_element.cpp"
-#include "types.c"
-#include <list>
+#include "flags.c"
+#include <vector>
 
 using namespace std;
 
 class json_array : public json_element {
 private:
-    list<json_element> values = list<json_element>();
+    vector<unique_ptr<json_element>> values = vector<unique_ptr<json_element>>();
 
 public:
     json_array() = default;
     ~json_array() {
+        values.clear();
         free(&values);
     }
 
     int get_type() override {
-        this -> values.push_front(json_array());
-        return JSON_ARRAY;
+        return g_json_array;
     }
 
-    list<json_element>* get_values() {
+    vector<unique_ptr<json_element>>* vlist() {
         return &values;
     }
 };
