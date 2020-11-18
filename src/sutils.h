@@ -1,5 +1,5 @@
-#ifndef HEXJSON_SUTILS_H
-#define HEXJSON_SUTILS_H
+#ifndef HEXJSON_SUTILS_CPP
+#define HEXJSON_SUTILS_CPP
 
 #include <string>
 #include <regex>
