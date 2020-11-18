@@ -9,4 +9,4 @@ add_library(hexjson SHARED
         src/json_int.cpp
         src/json_double.cpp
         src/json_bool.cpp
-        src/json_null.cpp src/hexjson.h)
+        src/json_null.cpp src/hexjson.h src/json_array.cpp src/json_object.cpp)
