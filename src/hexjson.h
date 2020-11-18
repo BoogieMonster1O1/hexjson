@@ -31,7 +31,7 @@ json_null null() {
 }
 
 json_object read(const string& value) {
-    return json_reader(value);
+    return json_deserializer(value).deserialize();
 }
 
 #endif
