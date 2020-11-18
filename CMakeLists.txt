@@ -20,6 +20,6 @@ add_library(hexjson SHARED
         src/sutils.h
         src/deserializer.cpp)
 
-add_executable(main_test test/test.c)
+add_executable(main_test test/test.cpp)
 target_link_libraries(main_test hexjson)
 add_test(main_test main_test)
