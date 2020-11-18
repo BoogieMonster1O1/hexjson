@@ -1,7 +1,7 @@
 #ifndef HEXJSON_HEXJSON_H
 #define HEXJSON_HEXJSON_H
 
-#include "sutils.cpp"
+#include "sutils.h"
 #include "deserializer.cpp"
 #include <string>
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "json_element.cpp"
+#include "element.h"
 #include "flags.c"
 
 class json_null : public json_element {

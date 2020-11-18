@@ -1,13 +1,11 @@
-#ifndef HEXJSON_ELEMENT_CPP
-#define HEXJSON_ELEMENT_CPP
+#ifndef HEXJSON_ELEMENT_H
+#define HEXJSON_ELEMENT_H
 
 #include <iostream>
 
 class json_element {
 public:
-    virtual int get_type() {
-        throw std::runtime_error("not implemented");
-    }
+    virtual int get_type() = 0;
 };
 
 #endif

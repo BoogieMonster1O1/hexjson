@@ -1,4 +1,4 @@
-#include "json_element.cpp"
+#include "element.h"
 #include "flags.c"
 #include <vector>
 
@@ -6,7 +6,7 @@ using namespace std;
 
 class json_array : public json_element {
 private:
-    vector<unique_ptr<json_element>> values = vector<unique_ptr<json_element>>();
+    vector<json_element *> values = vector<json_element *>();
 
 public:
     json_array() = default;
@@ -19,7 +19,7 @@ public:
         return g_json_array;
     }
 
-    vector<unique_ptr<json_element>>* vlist() {
+    vector<json_element *> * vlist() {
         return &values;
     }
 };

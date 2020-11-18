@@ -8,7 +8,7 @@
 #include "json_str.cpp"
 #include "token_c.c"
 #include "token_o.c"
-#include "sutils.cpp"
+#include "sutils.h"
 
 using namespace std;
 
@@ -70,7 +70,7 @@ private:
 
     json_reader reader;
 
-    int current_deserialization_type() {
+    unsigned int current_deserialization_type() {
         char current = reader.current();
         if (current == opening_object) {
             return g_json_object;

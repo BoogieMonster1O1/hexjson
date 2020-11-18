@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_library(hexjson SHARED
         src/flags.c
-        src/json_element.cpp
+        src/element.h
         src/json_str.cpp
         src/json_number.cpp
         src/json_bool.cpp
@@ -15,7 +15,5 @@ add_library(hexjson SHARED
         src/json_object.cpp
         src/token_o.c
         src/token_c.c
-        src/sutils.cpp
+        src/sutils.h
         src/deserializer.cpp)
-
-add_subdirectory(test)

@@ -1,3 +1,6 @@
+#ifndef HEXJSON_SUTILS_H
+#define HEXJSON_SUTILS_H
+
 #include <string>
 #include <regex>
 
@@ -14,3 +17,5 @@ string rtrim(const string& str) {
 string trim(const string& str) {
     return ltrim(rtrim(str));
 }
+
+#endif
